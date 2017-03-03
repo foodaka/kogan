@@ -71,15 +71,15 @@ class App extends Component {
   render() {
 		return (
 		  <div className="App">
-			<div className="App-header">
-			  <h2>Mark Hinschberger's Solution</h2>
-			</div>
-			<p className="App-intro">
-				{this.renderSolution()}
-			</p>
+				<div className="App-header">
+				  <h2>Mark Hinschberger's Solution</h2>
+				</div>
+				<p className="App-intro">
+					{this.renderSolution()}
+				</p>
 		  </div>
 		);
-  	}
+  }
 }
 
 export default App;
