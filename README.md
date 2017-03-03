@@ -1,8 +1,10 @@
-###
+#
 Kodan Challenge
 
 
-### Instructors
-1.clone the repo
-2. npm install
-3. npm start
+# Instructions
+```
+1. clone the repo ~> git@github.com:foodaka/kogan.git
+2. $ npm install
+3. $ npm start --> open up localhost:3000/ in your favorite browser
+```
