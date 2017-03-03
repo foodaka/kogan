@@ -43,37 +43,36 @@ class App extends Component {
           return (acc + (((height / 100) * (width / 100) * (length / 100)) * 250) / 4)
         }, 0 )
       //initiate rerender
-      that.setState( {
+      that.setState({
         answer: filteredData
-      } );
-    } )
+      });
+    })
   }
 
   call_API_FirstTime() {
     return axios.get( 'http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/1' )
       .then( res => {
         return res.data
-      } )
+      })
       .catch( err => {
         console.log( 'err', err );
-      } )
+      })
   }
 
   call_API_Next( url ) {
     return axios.get( url )
       .then( res => {
         return res.data
-      } )
+      })
       .catch( err => {
         console.log( 'err2', err );
-      } )
+      })
   }
 
   renderSolution( answer ) {
     return (
     <div>
-      The avg cubic weight of all products in air conditioner category
-      { this.state.answer }
+      The avg cubic weight of all products in air conditioner category { this.state.answer }
     </div>
     )
   }
