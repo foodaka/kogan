@@ -38,16 +38,16 @@ class App extends Component {
       //filter category, reduce array to single avg value
       filteredData = allData
         .filter( item => item.category === 'Air Conditioners' )
-				const getTotal = filteredData.length;
-        const reducedArr = filteredData.reduce( function ( acc, obj ) {
-          const {height, width, length} = obj.size
-          return (acc + (((height / 100) * (width / 100) * (length / 100)) * 250) /4 )
-        }, 0 )
+      const getTotal = filteredData.length;
+      const reducedArr = filteredData.reduce( function ( acc, obj ) {
+        const {height, width, length} = obj.size
+        return (acc + (((height / 100) * (width / 100) * (length / 100)) * 250) / 4)
+      }, 0 )
       //initiate rerender
-      that.setState({
+      that.setState( {
         answer: reducedArr
-      });
-    })
+      } );
+    } )
   }
 
   call_API_FirstTime() {
@@ -70,10 +70,11 @@ class App extends Component {
       })
   }
 
-  renderSolution( ) {
+  renderSolution() {
     return (
     <div>
-      The avg cubic weight of all products in air conditioner category { this.state.answer }
+      <div>The avg cubic weight of all products in air conditioner category </div>
+			<div>{ this.state.answer }</div>
     </div>
     )
   }
@@ -83,8 +84,7 @@ class App extends Component {
     <div className="App">
       <div className="App-header">
         <h2>Mark Hinschberger's Solution</h2>
-				{ this.renderSolution() }
-
+        { this.renderSolution() }
       </div>
     </div>
     );
